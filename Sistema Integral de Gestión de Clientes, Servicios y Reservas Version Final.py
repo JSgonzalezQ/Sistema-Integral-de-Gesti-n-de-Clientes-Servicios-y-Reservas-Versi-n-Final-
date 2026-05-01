@@ -231,7 +231,7 @@ def ejecutar():
 # INTERFAZ VISUAL
 # ================================
 ventana = tk.Tk()
-ventana.title("Sistema Software FJ")
+ventana.title("Sistema Integral de Gestión de Clientes, Servicios y Reservas Version Final")
 ventana.geometry("1000x600")
 
 frame = tk.Frame(ventana)

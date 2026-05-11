@@ -5,6 +5,7 @@ from excepciones import ErrorValidacion
 # GENERADOR DE DATOS
 # ============================================
 
+# Genera nombres aleatorios para simulaciones
 def generar_nombre():
     nombres = [
         "Juan", "Ana", "Luis", "Camila", "Pedro",
@@ -41,10 +42,12 @@ def generar_navegador():
 # CLASE CLIENTE
 # ============================================
 
+# Clase que representa un cliente del sistema
 class Cliente:
 
     def __init__(self, nombre, correo, navegador):
-
+        
+    # Validación básica del correo electrónico
         if "@" not in correo or "." not in correo:
             raise ErrorValidacion("Correo inválido")
 

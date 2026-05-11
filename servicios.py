@@ -6,6 +6,7 @@ from excepciones import ErrorValidacion
 # CLASE ABSTRACTA
 # ============================================
 
+# Clase abstracta base para todos los servicios
 class Servicio(ABC):
 
     def __init__(self, nombre, precio):
@@ -27,21 +28,23 @@ class Servicio(ABC):
 # TIPOS DE SERVICIO
 # ============================================
 
+# Servicio de alquiler de sala
 class Sala(Servicio):
 
     def calcular_costo(self, horas, descuento=0):
 
         return (self.precio * horas) - descuento
 
-
+# Servicio de préstamo de equipos
 class Equipo(Servicio):
 
     def calcular_costo(self, horas, descuento=0):
 
         return (self.precio * horas + 10) - descuento
 
+# Servicio de asesoría personalizada
 class Asesoria(Servicio):
-
+# Calcula el costo total del servicio
     def calcular_costo(self, horas, descuento=0):
 
         return (self.precio * horas * 1.2) - descuento
